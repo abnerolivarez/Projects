@@ -2,12 +2,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins' sans-serif;
+    font-family: Arial;
 }
 
 body {
     background: #10344e;
     color:#ededed;
+
+}
+.cfvideo{
+    height: 9vh;
+    color: white;
+    position: relative;
+
+}
+.cfvideo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(14, 21, 39, 0.8);
+    z-index: -1;
+
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    z-index: -2;
+}
+.cfvideo img{
+    width: 300px;
+    height: 300px;
+    margin-left: 900px;
+    margin-top: 200px;
 
 }
 .header {
@@ -30,6 +60,13 @@ body {
     text-decoration: none;
     font-weight: 600;
 }
+.header img{
+    width: 50px;
+    height: 50px;
+    margin-left: -775px;
+  
+
+}
 .navbar a {
     font-size: 18px;
     color:#ededed;
@@ -47,18 +84,35 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 100px;
 }
+
+
 .home-content{
     
     max-width: 600px;
+
 }
 .home-content h1 {
     font-size: 56px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 3s steps(30),
+        cursor .4s step-end infinite alternate; 
+    
 }
+@keyframes cursor{
+    50% { border-color: transparent}
 
+}
+@keyframes typing{
+    from { width: 0 }
+
+}
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
@@ -124,6 +178,43 @@ body {
 
 .btn-box a:hover::before {  
     width: 100%;
+}
+.cv{
+    text-align: center;
+    width: 550px;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    border-radius: 50px;
+    position: absolute;
+    margin-left: 80px;
+    color: rgb(39, 39, 39);
+   
+}
+.cv h1{
+    color:#02528b
+}
+
+.cv p{
+    text-align: left;
+    margin-left: 10px;
+    
+}
+
+.cert1 img{
+    width: 500px;
+    height: 300px;
+    margin-top: 200px;
+    margin-left: 700px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.cert1 .cert2 img{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    margin-top: -300px;   
+    margin-left: -250px; 
 }
 
     
