@@ -4,6 +4,18 @@
     box-sizing: border-box;
     font-family: Arial;
 }
+@font-face{
+    font-family: myFont1;
+    src:url(font1.otf);
+}
+@font-face{
+    font-family: myFont2;
+    src:url(font2.otf);
+}
+@font-face{
+    font-family: myFont3;
+    src:url(font3.ttf);
+}
 
 body {
     background: #10344e;
@@ -16,7 +28,7 @@ body {
     position: relative;
 
 }
-.cfvideo::before {
+.cfvideo::before {   
     content: '';
     position: absolute;
     inset: 0;
@@ -36,19 +48,19 @@ video{
 .cfvideo img{
     width: 300px;
     height: 300px;
-    margin-left: 900px;
+    margin-left: 855px;
     margin-top: 200px;
+    opacity: 70%;
 
 }
 .header {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0px;
     width: 100%;
-    padding: 20px 10%;
-    background: transparent;
+    height: 50px;
+    padding: 1px 20%;
+    background: #081b29;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
@@ -59,27 +71,39 @@ video{
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
+    margin-left: -110px;
 }
 .header img{
-    width: 50px;
-    height: 50px;
-    margin-left: -775px;
-  
-
+    width: 40px;
+    height: 40px;
+    margin-left: -125px;
+    border: 4px solid rgb(6, 201, 250);
+    border-radius: 50%;
+    border-width: 2px;
+         
 }
+
 .navbar a {
-    font-size: 18px;
+    font-size: 15px;
+    font-family: myfont3;
+    letter-spacing: 2px;
     color:#ededed;
     text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
+    
+    left: 150px;
+    margin: 10px;
+    position: relative;
     transition: .4s;
-
 }
+
 .navbar a:hover,
 .navbar a .active {
     color:#039ad6;
+    transform: translateY(-5px);
+    
+    
 }
+
 .home {
     height: 100vh;
     display: flex;
@@ -102,11 +126,11 @@ video{
     overflow: hidden;
     animation:
         typing 3s steps(30),
-        cursor .4s step-end infinite alternate; 
+        cursor .4s step-end infinite; 
     
 }
 @keyframes cursor{
-    50% { border-color: transparent}
+    50% { border-color: white}
 
 }
 @keyframes typing{
@@ -118,8 +142,11 @@ video{
     font-weight: 700;
     color:#039ad6
 }
-.home-content p{
-    font-size: 16px;
+
+.home-content li{
+    font-size: 13px;
+    font-family: Arial;
+    letter-spacing: 1px;
     margin: 10px 0 40px;
 }
 .home-content .btn-box {
@@ -131,6 +158,7 @@ video{
 }
 .btn-box a {
     position: relative;
+    top: 4rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -179,42 +207,188 @@ video{
 .btn-box a:hover::before {  
     width: 100%;
 }
-.cv{
+
+#title1{
     text-align: center;
-    width: 550px;
-    height: 300px;
-    background: rgb(255, 255, 255);
-    border-radius: 50px;
+    font-family: myfont1;
+    letter-spacing: 2px;
+    width: 300px;
+    color:#e6e6e6; 
+    top: 110%;
+    left: 49%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
     position: absolute;
-    margin-left: 80px;
-    color: rgb(39, 39, 39);
-   
-}
-.cv h1{
-    color:#02528b
+        
 }
 
-.cv p{
-    text-align: left;
-    margin-left: 10px;
+#graph1 {
+    color:#de7d07;
+    background:#081b29;
+    border: 5px solid white; 
+    width: 200px;
+    height: 250px;
+    padding-top: 40px;
+    border-radius: 15px;
+    text-align: center;
+    top: 120%;
+    left: 300px;
+    font-size: 20px;
+    position: absolute;
+    transition: .3s ease-in-out;    
+}
+#graph1:hover{
+    transform: scale(1.5);
+}
+
+#graph1 p{
+    font-size: 14px;
+    color: antiquewhite;
+    top:40%;
+    position: absolute;
     
 }
 
-.cert1 img{
-    width: 500px;
-    height: 300px;
-    margin-top: 200px;
-    margin-left: 700px;
-    border-color: rgb(0, 0, 0);
-    border-radius: 20px;
-}
-
-.cert1 .cert2 img{
-    width: 500px;
-    height: 300px;
+#graph2 {
+    color:#de7d07;
+    background:#081b29;
+    border: 5px solid white;
+    width: 200px;
+    height: 250px;
+    padding-top: 40px;
+    border-radius: 15px;
+    text-align: center;
+    top: 120%;
+    left: 575px;
+    font-size: 20px;
     position: absolute;
-    margin-top: -300px;   
-    margin-left: -250px; 
+    transition: .3s ease-in-out;  
+}
+#graph2:hover{
+    transform: scale(1.5);
+}
+#graph2 p{
+    font-size: 15px;
+    color: antiquewhite;
+    top: 40%;
+    position: absolute;
+}
+#graph3 {
+    color:#de7d07;
+    background:#081b29;
+    border: 5px solid white;
+    width: 200px;
+    height: 250px;
+    padding-top: 40px;
+    border-radius: 15px;
+    text-align: center;
+    top: 120%;
+    left: 860px;
+    font-size: 20px;
+    position: absolute; 
+    transition: .3s ease-in-out;     
+}
+#graph3:hover{
+    transform: scale(1.5);
+}
+#graph3 p{
+    font-size: 14px;
+    top: 40%;
+    color: antiquewhite;
+    position: absolute;
 }
 
+.cert1{
+    position: absolute;
+    width: 500px;
+    height: 380px;
+    top: 225%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 10px solid rgb(5, 147, 230);
+    border-radius: 30px;  
+    box-shadow: 10px 25px 28px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.img-cert{
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+
+img{
+    width: 100%;
+}
+
+@keyframes slide{   /*slide image from rigth to left*/
+    0% {transform: translateX(0);}
+    25% {transform: translateX(0);}
+    30% {transform: translateX(-100%);}
+    50% {transform: translateX(-100%);}
+    55% {transform: translateX(-200%);}
+    75% {transform: translateX(-200%);}
+    80% {transform: translateX(-300%);}
+    100% {transform: translateX(-300%);}
+}
+
+.foot {
+    width: 100%;
+    height: 117px;
+    letter-spacing: 2px;
+    color:#ffffff;
+    background: #081b29;
+    text-align: center;
+    margin-top: 1200px;
+    margin-left: 0%;
+    font-size: smaller;
+    font-family: myFont2;     
+}
+.foot a{
+    text-decoration: none;
+    width: 100%;
+    height: 100px;
+    color:#ffffff;
+    text-align: center;
+    margin-top: 1080px;
+    margin-left: 5px;
+    font-family: myFont2; 
+}
+.foot p{
+    margin-left: 30px;
+    font-size: 10px;
+    font-family: myFont1;
+}
+
+.foot .icons i{
+    font-size: 20px;
+    top: -50px;
+    left: 400px;
+    color:#ededed;
+    font-weight: 500;
+    margin-left: 4px;
+    transition: .4s;
+    position: relative;
+}
+
+.foot .icons i:hover{
+    color: #039ad6;
+    transform: translateY(-6px);
+}
+
+/*Experience*/
+.experience h3{
+    position: relative;
+    color: #e9e9e9;
+    margin-left: 5rem;
+    column-count: 1;
+}
+.experience p{
+    position: relative;
+    color: #97a9b1;
+    margin-left: 5rem;
+    column-count: 1;
+}
     
