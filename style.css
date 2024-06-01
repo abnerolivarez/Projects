@@ -220,10 +220,12 @@ video{
     background: transparent;
     border-radius: 10px;
     border: 5px solid rgb(255, 255, 255);
-    position: absolute;
-        
+    position: absolute; 
+    transition: .3s ease-in-out; 
 }
-
+#title1:hover{
+    color: #00abf0;
+}
 #graph1 {
     color:#de7d07;
     background:#081b29;
