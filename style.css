@@ -18,6 +18,8 @@
 }
 
 body {
+    margin-left: 0;
+    margin-right: 0;
     background: #10344e;
     color:#ededed;
 
@@ -392,5 +394,15 @@ img{
     color: #97a9b1;
     margin-left: 5rem;
     column-count: 1;
+}
+
+@media (max-width: 1231px){
+    body {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: .5rem;
+        width: 10%;
+}
+
 }
     
