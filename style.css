@@ -392,13 +392,20 @@ img{
     column-count: 1;
 }
 
-@media (max-width: 1231px){
-    body {
-        margin-left: 0;
-        margin-right: 0;
-        font-size: .5rem;
-        width: 10%;
-}
-
-}
+body{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    text-align: left;
     
+    
+}
+@media only screen and(min-width: 400px){
+    .cfvideo{
+        visibility: collapse;
+    }
+    .header{
+        visibility: visible;
+    }
+}
